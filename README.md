@@ -1,8 +1,8 @@
-# AutoQA Model Comparison — Virtual Teaching Platform
+# AutoQA Model Comparison
 
 ## Overview
 
-This project evaluates and compares the performance of two large language models — **GPT-4o** and **GPT-5.1** — in the automatic quality assessment (AutoQA) of recorded lessons on a virtual teaching platform. Beyond measuring inter-model reliability, the analysis explores whether the scores produced by each model are predictive of real student outcomes: specifically, whether a student attends the next lesson and whether they remain enrolled one month later.
+This project evaluates and compares the performance of two large language models — **GPT-4o** and **GPT-5.1** — in the automatic quality assessment (AutoQA) of recorded lessons. Beyond measuring inter-model reliability, the analysis explores whether the scores produced by each model are predictive of real student outcomes: specifically, whether a student attends the next lesson and whether they remain enrolled one month later.
 
 The goal is to determine if automated lesson quality scores can serve as an early signal of student churn or retention.
 
