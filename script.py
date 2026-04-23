@@ -68,7 +68,7 @@ def plot_reliability(rel_df):
     plt.axhline(0.6, color='green', linestyle='--', label='Sustancial (0.6)')
     plt.axhline(0.4, color='orange', linestyle='--', label='Moderado (0.4)')
     
-    plt.title('Consistencia entre Modelos (Cohen\'s Kappa)', fontsize=14)
+    plt.title('Consistency Across Models (Cohen\'s Kappa)', fontsize=14)
     plt.xticks(rotation=45)
     plt.legend()
     plt.tight_layout()
@@ -81,8 +81,8 @@ def plot_predictive_utility(pred_df):
     pred_df_sorted = pred_df.sort_values('Corr_M1_Retained', ascending=False)
     
     sns.barplot(x='Item', y='Corr_M1_Retained', data=pred_df_sorted, palette='magma')
-    plt.title('Relación entre Ítems y Retención del Alumno (M1)', fontsize=14)
-    plt.ylabel('Correlación (Punto Biserial)')
+    plt.title('Relationship Between Items and Student Retention (M1)', fontsize=14)
+    plt.ylabel('Correlation (Biserial Point)')
     plt.axhline(0, color='black', linewidth=0.8)
     plt.xticks(rotation=45)
     
@@ -93,11 +93,11 @@ if __name__ == "__main__":
     try:
         rel_table, pred_table = run_full_analysis()
         
-        print("--- TABLA DE FIABILIDAD ---")
+        print("--- RELIABILITY TABLE ---")
         print(rel_table)
         
         plot_reliability(rel_table)
         plot_predictive_utility(pred_table)
         
     except FileNotFoundError:
-        print(f"Error: Los archivos CSV deben estar dentro de la carpeta '{folder_path}'")
+        print(f"Error: The CSV files must be located in the folder '{folder_path}'")
